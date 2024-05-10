@@ -1,9 +1,9 @@
-import BookForm from "./components/BookForm";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <BookForm/>
-  );
+    <NavBar/>
+  )
 }
 
 export default App;
