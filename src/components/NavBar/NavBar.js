@@ -1,10 +1,11 @@
 import styles from "./NavBar.module.css"
+import logo from "../../images/herbario.png"
 
 const NavBar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.navbarContent}>
-                <img src="https://collectory.sibbr.gov.br/collectory/data/collection/Herbario_JOI.png" alt="Herbario's logo"/>
+                <img src={logo} alt="Logo do herbario"/>
                 <h1 className={styles.title}>HERBARIO - JOI</h1>
             </div>
             <ul className={styles.navbarList}>

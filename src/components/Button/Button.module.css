@@ -1,15 +1,16 @@
 .button {
-    background-color: #68E655;
+    background-color: #004C1C;
     color: #FFF;
     border: 1px solid #FFF;
     border-radius: 5px 10px;
-    box-shadow: 1px 1px 1px #a6e360;
+    box-shadow: 1px 1px 1px #79a545;
     cursor: pointer;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     width: 80%;
 }
 
 .button:hover {
-    background-color: #09cc3d;
+    background-color: #68E655;
+    box-shadow: 1px 1px 1px #a6e360;
     color:#FFF
 }

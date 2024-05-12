@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: #D1C8C1;
+    width: 100%;
     
 
     div {
@@ -19,7 +20,7 @@
         h1 {
             width: 100%;
             font-size: large;
-            font-weight: 500;
+            font-weight: 600;
         }
 
     }
