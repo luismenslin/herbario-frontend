@@ -1,6 +1,7 @@
 import styles from "./BookTable.module.css"
 import {useState, useEffect} from "react"
 import axios from 'axios'
+import { Link } from "react-router-dom"
 
 const BookTable = () => {
 
@@ -22,7 +23,6 @@ const BookTable = () => {
         if(!load) {
             axios.get('http://localhost:8080/api/v1/books')
                 .then(response => {
-                    console.log(response.data)
                     setData(response.data)
                     setLoad(true)
             })
@@ -35,7 +35,7 @@ const BookTable = () => {
     
 
     return (
-        <table className="bookTable">
+        <table className={styles.booktable}>
             <thead>
                 <tr>
                     <th>Titulo</th>
@@ -54,7 +54,9 @@ const BookTable = () => {
                         <td>{book.edition}</td>
                         <td>{book.publication}</td>
                         <td>
-                            <button>Alterar</button>
+                            <button>
+                                <Link className={styles.link} to={`/cadastroLivros?id=${book.id}`}>Alterar</Link>
+                            </button>
                             <button onClick={() => handleDelete(book.id)}>Excluir</button>
                         </td>
                         <td>

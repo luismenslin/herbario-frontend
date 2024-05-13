@@ -1,5 +1,6 @@
 import styles from "./NavBar.module.css"
 import logo from "../../images/herbario.png"
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -10,9 +11,14 @@ const NavBar = () => {
             </div>
             <ul className={styles.navbarList}>
                 <li>Home</li>
-                <li>Livros</li>
-                <li>Pessoas</li>
-                <li>Rotinas</li>
+                <li>
+                    <Link className={styles.link} to="/cadastroLivros">Cadastrar Livros</Link>
+                </li>
+                <li>
+                    <Link className={styles.link} to="/listagemLivros">Listar Livros</Link>
+                </li>
+                <li>Cadastrar Pessoas</li>
+                <li>Listar Pessoas</li>
             </ul>
         </nav>
     )

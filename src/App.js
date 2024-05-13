@@ -1,15 +1,18 @@
-import BookListPage from "./pages/BookListPage";
-import NavBar from "./components/NavBar"
-import BookTable from "./components/BookTable"
-import BookForm from "./components/BookForm"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import BookListPage from "./pages/BookListPage"
+import BookRegisterPage from "./pages/BookRegisterPage/BookRegisterPage"
 
 function App() {
   return (
-    <section>
-      <NavBar/>
-      <BookTable/>
-      {/*<BookForm/>*/}
-    </section>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/cadastroLivros" element={<BookRegisterPage/>}/>
+        <Route path="/cadastroLivros/:id" element={<BookRegisterPage/>}/>
+        <Route path="/listagemLivros" element={<BookListPage/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,8 +1,13 @@
+import BookTable from "../../components/BookTable/BookTable"
+import NavBar from "../../components/NavBar"
 import styles from "./BookListPage.module.css"
 
 const BookListPage = () => {
     return (
-        "Agora foi"
+        <section>
+            <NavBar/>
+            <BookTable/>
+        </section>
     )
 }
 
