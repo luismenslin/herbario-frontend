@@ -17,8 +17,12 @@ const NavBar = () => {
                 <li>
                     <Link className={styles.link} to="/listagemLivros">Listar Livros</Link>
                 </li>
-                <li>Cadastrar Pessoas</li>
-                <li>Listar Pessoas</li>
+                <li>
+                    <Link className={styles.link} to="/cadastroPessoas">Cadastrar Pessoas</Link>
+                </li>
+                <li>
+                    <Link className={styles.link} to="/listagemPessoas">Listar Pessoas</Link>
+                </li>
             </ul>
         </nav>
     )
