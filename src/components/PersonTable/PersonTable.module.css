@@ -1,17 +1,16 @@
-.persontable {
-
-    tbody {
-
-        td {
-
-            button {
-
-                .link {
-                    text-decoration: none;
-                    color: inherit;
-                }
-            }
-        }
-    }
-    
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    padding: 15px;
+}
+.link {
+    text-decoration: none;
+    color: inherit;
 }

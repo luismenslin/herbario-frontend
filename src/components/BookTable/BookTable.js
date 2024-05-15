@@ -36,14 +36,14 @@ const BookTable = () => {
 
     return (
         <table className={styles.booktable}>
-            <thead>
-                <tr>
-                    <th>Titulo</th>
-                    <th>Autor</th>
-                    <th>Edição</th>
-                    <th>Publicação</th>
-                    <th>Funções</th>
-                    <th>Locado</th>
+            <thead className={styles.tableheader}>
+                <tr className={styles.tablecolumn}>
+                    <th className={styles.tablecolumnname}>Titulo</th>
+                    <th className={styles.tablecolumnname}>Autor</th>
+                    <th className={styles.tablecolumnname}>Edição</th>
+                    <th className={styles.tablecolumnname}>Publicação</th>
+                    <th className={styles.tablecolumnname}>Funções</th>
+                    <th className={styles.tablecolumnname}>Locado</th>
                 </tr>
             </thead>
             <tbody>
