@@ -1,11 +1,14 @@
 import styles from "./Home.module.css"
+import { useState } from "react"
 import NavBar from "../../components/NavBar"
 
+
+
+
 const Home = () => {
+   
     return (
-        <div>
-            <NavBar/>
-        </div>
+        <NavBar/>
     )
 }
 export default Home

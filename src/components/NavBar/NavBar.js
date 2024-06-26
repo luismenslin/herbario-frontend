@@ -25,6 +25,9 @@ const NavBar = () => {
                 <li>
                     <Link className={styles.link} to="/listagemPessoas">Listar Pessoas</Link>
                 </li>
+                <li>
+                    <Link className={styles.link} to="/locarLivro">Locar Livro</Link>
+                </li>
             </ul>
         </nav>
     )
