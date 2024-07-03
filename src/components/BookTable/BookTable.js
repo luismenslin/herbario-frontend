@@ -7,6 +7,7 @@ import ModalDelete from "../ModalDelete"
 const BookTable = () => {
     const [openModal, setOpenModal] = useState(false)
     const [selectedBookId, setSelectedBookId] = useState(null)
+
     const [data, setData] = useState([])
     const [load, setLoad] = useState(false)
 
@@ -67,13 +68,10 @@ const BookTable = () => {
                                 </button>
                                 <button onClick={() => openDeleteModal(book.id)}>Excluir</button>
                             </td>
-                            <td>
-                                <button>Locar Livro</button>
-                                <button>Devolver Livro</button>
-                            </td>
                         </tr>
                     ))}
                 </tbody>
+                
             </table>
             {openModal && selectedBookId && (
                 <ModalDelete
@@ -82,7 +80,7 @@ const BookTable = () => {
                     objeto={selectedBookId}
                     setOpenModal={setOpenModal}
                 />
-            )}
+            )}            
         </>
     )
 }

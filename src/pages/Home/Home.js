@@ -1,6 +1,6 @@
 import styles from "./Home.module.css"
-import { useState } from "react"
 import NavBar from "../../components/NavBar"
+
 
 
 
@@ -8,7 +8,9 @@ import NavBar from "../../components/NavBar"
 const Home = () => {
    
     return (
-        <NavBar/>
+        <div>
+            <NavBar/>
+        </div>
     )
 }
 export default Home

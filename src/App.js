@@ -9,6 +9,8 @@ import PersonRegisterPage from "./pages/PersonRegisterPage"
 import PersonListPage from "./pages/PersonListPage"
 import LockBookPage from "./pages/LockBookPage/LockBookPage"
 
+import Intern from "./pages/Intern";
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +25,8 @@ function App() {
         <Route path="/listagemPessoas" element={<PersonListPage/>}/>
 
         <Route path="/locarLivro" element={<LockBookPage/>}/>
+
+        <Route path="/intern" element={<Intern/>}/>
         
       </Routes>
     </BrowserRouter>

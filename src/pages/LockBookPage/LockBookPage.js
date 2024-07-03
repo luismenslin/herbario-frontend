@@ -1,15 +1,17 @@
-import SelectInput from "../../components/SelectInput/SelectInput"
+
 import NavBar from "../../components/NavBar"
 import styles from "./LockBookPage.module.css"
-import ModalLockBook from "../../components/ModalLockBook"
+import {useState, useEffect} from "react"
+
+import LockBookTable from "../../components/LockBookTable"
 
 const LockBookPage = () => {
+
     return (
         <div>
             <NavBar/>
-            <SelectInput/>
-            <ModalLockBook/>
-        </div>
+            <LockBookTable/>
+       </div>
     )
 }
 export default LockBookPage

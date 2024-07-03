@@ -28,6 +28,9 @@ const NavBar = () => {
                 <li>
                     <Link className={styles.link} to="/locarLivro">Locar Livro</Link>
                 </li>
+                <li>
+                    <Link className={styles.link} to="/intern">Apontamento</Link>
+                </li>
             </ul>
         </nav>
     )
