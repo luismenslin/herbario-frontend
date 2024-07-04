@@ -1,0 +1,27 @@
+.apontamento {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.estagiario {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.descricaoLabel {
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.descricaoTextarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    resize: none;
+}

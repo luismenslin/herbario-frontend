@@ -10,6 +10,7 @@ import PersonListPage from "./pages/PersonListPage"
 import LockBookPage from "./pages/LockBookPage/LockBookPage"
 
 import Intern from "./pages/Intern";
+import ApontamentosPage from "./pages/ApontamentosPage"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/locarLivro" element={<LockBookPage/>}/>
 
         <Route path="/intern" element={<Intern/>}/>
+        <Route path="/apontamentos" element={<ApontamentosPage/>}/>
         
       </Routes>
     </BrowserRouter>

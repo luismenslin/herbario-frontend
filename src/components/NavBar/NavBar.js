@@ -29,7 +29,10 @@ const NavBar = () => {
                     <Link className={styles.link} to="/locarLivro">Locar Livro</Link>
                 </li>
                 <li>
-                    <Link className={styles.link} to="/intern">Apontamento</Link>
+                    <Link className={styles.link} to="/intern">Estagiarios</Link>
+                </li>
+                <li>
+                    <Link className={styles.link} to="/apontamentos">Apontamentos</Link>
                 </li>
             </ul>
         </nav>

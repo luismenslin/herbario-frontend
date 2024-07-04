@@ -3,6 +3,8 @@ import NavBar from "../../components/NavBar"
 import styles from "./Intern.module.css"
 
 const Intern = () => {
+
+
     return (
         <div>
             <NavBar/>

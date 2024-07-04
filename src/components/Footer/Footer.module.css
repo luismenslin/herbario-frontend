@@ -1,0 +1,18 @@
+.footer {
+    height: var(--navbar-height); /* Mesmo tamanho da navbar */
+    background-color: #D1C8C1; /* Cor de fundo do rodapé */
+    color: black; /* Cor do texto do rodapé */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+a {
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+
+}
