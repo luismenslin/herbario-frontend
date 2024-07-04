@@ -59,11 +59,11 @@ const PersonTable = () => {
                             <td>{person.name}</td>
                             <td>{person.phone}</td>
                             <td>{person.graduation}</td>
-                            <td>
+                            <td className={styles.rotina}>
                                 <button>
                                     <Link className={styles.link} to={`/cadastroPessoas?id=${person.id}`}>Alterar</Link>
                                 </button>
-                                <button onClick={() => openDeleteModal(person.id)}>Excluir</button>
+                                <button className={styles.excluir} onClick={() => openDeleteModal(person.id)}>Excluir</button>
                             </td>
                         </tr>
                     ))}

@@ -11,6 +11,9 @@ const BookTable = () => {
     const [data, setData] = useState([])
     const [load, setLoad] = useState(false)
 
+    const [dataLock, setDataLock] = useState([])
+    const [loadLock, setLoadLock] = useState(false)
+
     const handleDelete = (bookId) => {
         axios.delete(`http://localhost:8080/api/v1/books/${bookId}`)
             .then(response => {
@@ -36,10 +39,38 @@ const BookTable = () => {
                 })
         }
     }, [load])
+    
+    useEffect(() => {
+        if (!loadLock) {
+            axios.get('http://localhost:8080/api/v1/lockbooks')
+                .then(response => {
+                    setDataLock(response.data)
+                    setLoadLock(true)
+                })
+                .catch(error => {
+                    console.error("Não deu boa em buscar os dados parça", error)
+                })
+        }
+    }, [loadLock])
 
     const openDeleteModal = (bookId) => {
         setSelectedBookId(bookId)
         setOpenModal(true)
+    }
+
+    const isBookLocked = (bookId) => {
+        return dataLock.some(lock => lock.book.id === bookId && lock.dataUnlocked === null);
+    }
+
+    const handleUnlock = (bookId) => {
+        axios.put(`http://localhost:8080/api/v1/lockbooks/unlock/${bookId}`)
+            .then(response => {
+                setDataLock(dataLock.filter(lock => lock.book.id !== bookId))
+                console.log("Livro devolvido")
+            })
+            .catch(error => {
+                console.error("Não deu pra deslocar o livro:", error)
+            })
     }
 
     return (
@@ -62,11 +93,14 @@ const BookTable = () => {
                             <td>{book.author}</td>
                             <td>{book.edition}</td>
                             <td>{book.publication}</td>
-                            <td>
+                            <td className={styles.rotina}>
                                 <button>
                                     <Link className={styles.link} to={`/cadastroLivros?id=${book.id}`}>Alterar</Link>
                                 </button>
-                                <button onClick={() => openDeleteModal(book.id)}>Excluir</button>
+                                <button className={styles.excluir} onClick={() => openDeleteModal(book.id)}>Excluir</button>
+                            </td>
+                            <td>
+                                {isBookLocked(book.id) ? <button className={styles.isLocado} onClick={() => handleUnlock(book.id)}>Locado</button> : <button className={styles.isDisponivel}>Disponível</button>}
                             </td>
                         </tr>
                     ))}

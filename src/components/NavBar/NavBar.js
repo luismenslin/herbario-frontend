@@ -7,7 +7,7 @@ const NavBar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navbarContent}>
                 <img src={logo} alt="Logo do herbario"/>
-                <h1 className={styles.title}>HERBARIO - JOI</h1>
+                <h1 className={styles.title}>HERBARIO - Books</h1>
             </div>
             <ul className={styles.navbarList}>
                 <li>

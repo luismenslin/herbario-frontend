@@ -14,3 +14,17 @@ th, td {
     text-decoration: none;
     color: inherit;
 }
+.rotina {
+    display: flex;
+    align-items: center;
+
+    button {
+        width: 95%;
+        height: 100%;
+        margin: 2px;
+    }
+
+    .excluir {
+        background-color: red;
+    }
+}

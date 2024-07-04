@@ -15,3 +15,36 @@ th, td {
     text-decoration: none;
     color: inherit;
 }
+
+.rotina {
+    display: flex;
+    align-items: center;
+
+    button {
+        width: 95%;
+        height: 100%;
+        margin: 2px;
+    }
+
+    .excluir {
+        background-color: red;
+    }
+    
+}
+
+.isLocado {
+    background-color: red;
+    width: 50%;
+    height: 100%;
+    margin: 2px;         
+}
+
+.isLocado:hover {
+    background-color: red;
+}
+
+.isDisponivel {
+    width: 50%;
+    height: 100%;
+    margin: 2px;     
+}
